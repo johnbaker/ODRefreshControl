@@ -29,6 +29,7 @@
 @property (nonatomic, strong) UIColor *tintColor;
 @property (nonatomic, assign) UIActivityIndicatorViewStyle activityIndicatorViewStyle;
 @property (nonatomic, strong) UIColor *activityIndicatorViewColor; // iOS5 or more
+@property (nonatomic, assign) BOOL blocksUserInteraction;
 
 - (id)initInScrollView:(UIScrollView *)scrollView;
 

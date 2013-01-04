@@ -47,6 +47,13 @@ static inline CGFloat lerp(CGFloat a, CGFloat b, CGFloat p)
     return a + (b - a) * p;
 }
 
+- (void)setRefreshing:(BOOL)refreshing {
+    _refreshing = refreshing;
+    if(self.blocksUserInteraction) {
+        self.scrollView.userInteractionEnabled = !refreshing;
+    }
+}
+
 - (id)initInScrollView:(UIScrollView *)scrollView {
     return [self initInScrollView:scrollView activityIndicatorView:nil];
 }
